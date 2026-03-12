@@ -55,22 +55,22 @@ const services = [
 
 const Services = () => (
   <Layout>
-    <section className="py-20 bg-secondary">
+    <section className="py-12 md:py-20 bg-secondary">
       <div className="container mx-auto px-6 text-center">
         <p className="text-primary font-body text-sm tracking-[0.3em] uppercase mb-2">What We Offer</p>
-        <h1 className="font-display text-4xl md:text-5xl font-bold text-foreground mb-4">Our Services</h1>
-        <p className="text-muted-foreground max-w-2xl mx-auto">
+        <h1 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4">Our Services</h1>
+        <p className="text-foreground/80 max-w-2xl mx-auto">
           From custom residential installations to large-scale commercial projects, we deliver premium glass solutions tailored to your needs.
         </p>
       </div>
     </section>
 
-    <section className="py-20">
-      <div className="container mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-8">
+    <section className="py-12 md:py-20">
+      <div className="container mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
         {services.map((s, i) => (
           <div
             key={s.title}
-            className="group bg-card border gold-border rounded p-8 hover:border-primary/50 transition-all duration-300 animate-fade-in"
+            className="group bg-card border gold-border rounded p-5 md:p-8 hover:border-primary/50 transition-all duration-300 animate-fade-in"
             style={{ animationDelay: `${i * 0.1}s`, opacity: 0 }}
           >
             <div className="flex items-start gap-5">
@@ -96,9 +96,9 @@ const Services = () => (
     </section>
 
     {/* CTA */}
-    <section className="gold-gradient py-20">
+    <section className="gold-gradient py-12 md:py-20">
       <div className="container mx-auto px-6 text-center">
-        <h2 className="font-display text-3xl md:text-4xl font-bold text-primary-foreground mb-4">Need a Custom Solution?</h2>
+        <h2 className="font-display text-2xl md:text-3xl lg:text-4xl font-bold text-primary-foreground mb-4">Need a Custom Solution?</h2>
         <p className="text-primary-foreground/80 mb-8 max-w-lg mx-auto">
           Every project is unique. Contact us to discuss your specific requirements and get a free estimate.
         </p>

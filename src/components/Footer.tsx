@@ -1,11 +1,11 @@
 import { Link } from "react-router-dom";
-import { Phone, Mail, MapPin } from "lucide-react";
+import { Phone, Mail, MapPin, Instagram } from "lucide-react";
 import phoenixLogo from "@/assets/logo.jpg";
 
 const Footer = () => (
   <footer className="bg-secondary border-t gold-border">
-    <div className="container mx-auto px-6 py-12">
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
+    <div className="container mx-auto px-6 py-8 md:py-12">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-10">
         <div>
           <div className="flex items-center gap-3 mb-4">
             <img src={phoenixLogo} alt="Phoenix Glass Logo" className="h-10 w-auto mix-blend-screen" />
@@ -18,9 +18,13 @@ const Footer = () => (
           </p>
         </div>
         <div>
-          <h4 className="font-display text-lg text-foreground mb-4">Quick Links</h4>
-          <div className="flex flex-col gap-2">
+          <h4 className="font-display text-base font-bold tracking-widest uppercase mb-1 text-foreground">
+            Quick Links
+          </h4>
+          <div className="h-[1.5px] w-10 bg-gradient-to-r from-primary to-transparent mb-5" />
+          <div className="flex flex-col gap-3">
             {[
+              { to: "/", label: "Home" },
               { to: "/about", label: "About Us" },
               { to: "/services", label: "Services" },
               { to: "/our-works", label: "Our Works" },
@@ -30,19 +34,45 @@ const Footer = () => (
               <Link
                 key={link.to}
                 to={link.to}
-                className="text-muted-foreground text-sm hover:text-primary transition-colors"
+                className="relative font-body text-xs font-bold tracking-widest uppercase text-foreground/60 hover:text-primary transition-all duration-300 group w-fit"
               >
                 {link.label}
+                <span className="absolute -bottom-0.5 left-0 h-[1.5px] bg-gradient-to-r from-transparent via-primary to-transparent w-0 opacity-0 group-hover:w-full group-hover:opacity-100 transition-all duration-300" />
               </Link>
             ))}
           </div>
         </div>
         <div>
-          <h4 className="font-display text-lg text-foreground mb-4">Contact</h4>
+          <h4 className="font-display text-base font-bold tracking-widest uppercase mb-1 text-foreground">
+            Contact
+          </h4>
+          <div className="h-[1.5px] w-10 bg-gradient-to-r from-primary to-transparent mb-5" />
           <div className="flex flex-col gap-3 text-sm text-muted-foreground">
-            <span className="flex items-center gap-2"><Phone size={14} className="text-primary" /> (555) 123-4567</span>
-            <span className="flex items-center gap-2"><Mail size={14} className="text-primary" /> info@phoenixglass.com</span>
-            <span className="flex items-center gap-2"><MapPin size={14} className="text-primary" /> 123 Glass Avenue, Phoenix, AZ</span>
+            <a href="tel:+15551234567" className="flex items-center gap-2 hover:text-primary transition-colors"><Phone size={14} className="text-primary shrink-0" /> (555) 123-4567</a>
+            <a href="mailto:info@phoenixglass.com" className="flex items-center gap-2 hover:text-primary transition-colors"><Mail size={14} className="text-primary shrink-0" /> info@phoenixglass.com</a>
+            <a href="https://maps.google.com/maps?q=123+Glass+Avenue+Phoenix+AZ" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 hover:text-primary transition-colors"><MapPin size={14} className="text-primary shrink-0" /> 123 Glass Avenue, Phoenix, AZ</a>
+            <div className="flex gap-3 mt-2">
+              <a
+                href="https://www.instagram.com/phoenixglassandmirror"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center justify-center w-8 h-8 rounded border gold-border hover:border-primary hover:text-primary text-muted-foreground transition-colors"
+                aria-label="Instagram"
+              >
+                <Instagram size={14} />
+              </a>
+              <a
+                href="https://www.facebook.com/phoenixglassandmirror"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center justify-center w-8 h-8 rounded border gold-border hover:border-primary hover:text-primary text-muted-foreground transition-colors"
+                aria-label="Facebook"
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+                </svg>
+              </a>
+            </div>
           </div>
         </div>
       </div>

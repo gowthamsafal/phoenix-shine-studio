@@ -17,19 +17,18 @@ const clients = [
 
 const Clients = () => (
   <Layout>
-    <section className="py-20 bg-secondary">
+    <section className="py-12 md:py-20 bg-secondary">
       <div className="container mx-auto px-6 text-center">
         <p className="text-primary font-body text-sm tracking-[0.3em] uppercase mb-2">Testimonials</p>
-        <h1 className="font-display text-4xl md:text-5xl font-bold text-foreground mb-4">Our Clients</h1>
-        <p className="text-muted-foreground max-w-2xl mx-auto">
+        <h1 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4">Our Clients</h1>
+        <p className="text-foreground/80 max-w-2xl mx-auto">
           Trusted by homeowners, designers, and businesses across Arizona.
         </p>
       </div>
     </section>
 
-    {/* Testimonials */}
-    <section className="py-20">
-      <div className="container mx-auto px-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+    <section className="py-12 md:py-20">
+      <div className="container mx-auto px-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
         {testimonials.map((t) => (
           <div key={t.name} className="bg-card border gold-border rounded p-6 flex flex-col">
             <Quote size={24} className="text-primary/30 mb-4" />
@@ -48,14 +47,21 @@ const Clients = () => (
       </div>
     </section>
 
-    {/* Client logos as text */}
-    <section className="py-16 bg-secondary">
+    <section className="py-10 md:py-16 bg-secondary">
       <div className="container mx-auto px-6 text-center">
+        <p className="text-primary font-body text-sm tracking-[0.3em] uppercase mb-2">Our Network</p>
         <h2 className="font-display text-2xl font-bold text-foreground mb-10">Trusted Partners</h2>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
           {clients.map((c) => (
-            <div key={c} className="bg-card border gold-border rounded py-6 px-4">
-              <p className="font-display text-sm text-muted-foreground">{c}</p>
+            <div
+              key={c}
+              className="group relative bg-card border gold-border rounded py-8 px-4 overflow-hidden transition-all duration-300 hover:border-primary hover:shadow-[0_0_24px_hsl(43_50%_55%_/_0.25)]"
+            >
+              {/* Gold shimmer sweep on hover */}
+              <div className="absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-700 bg-gradient-to-r from-transparent via-primary/10 to-transparent pointer-events-none" />
+              {/* Top gold accent line */}
+              <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-primary to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              <p className="font-display text-sm font-semibold text-foreground/70 group-hover:text-primary transition-colors duration-300 tracking-wide">{c}</p>
             </div>
           ))}
         </div>

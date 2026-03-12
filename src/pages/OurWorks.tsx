@@ -24,14 +24,14 @@ const OurWorks = () => {
 
   return (
     <Layout>
-      <section className="py-20 bg-secondary">
+      <section className="py-12 md:py-20 bg-secondary">
         <div className="container mx-auto px-6 text-center">
           <p className="text-primary font-body text-sm tracking-[0.3em] uppercase mb-2">Portfolio</p>
-          <h1 className="font-display text-4xl md:text-5xl font-bold text-foreground mb-4">Our Works</h1>
-          <p className="text-muted-foreground max-w-2xl mx-auto mb-8">
+          <h1 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4">Our Works</h1>
+          <p className="text-foreground/80 max-w-2xl mx-auto mb-8">
             A showcase of our finest glass and mirror installations.
           </p>
-          <div className="flex gap-4 justify-center">
+          <div className="flex flex-wrap gap-3 justify-center">
             {categories.map((cat) => (
               <button
                 key={cat}
@@ -49,8 +49,8 @@ const OurWorks = () => {
         </div>
       </section>
 
-      <section className="py-20">
-        <div className="container mx-auto px-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <section className="py-12 md:py-20">
+        <div className="container mx-auto px-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
           {filtered.map((p) => (
             <div key={p.title} className="group bg-card rounded overflow-hidden border gold-border hover:border-primary/50 transition-all duration-300">
               <div className="overflow-hidden h-64">

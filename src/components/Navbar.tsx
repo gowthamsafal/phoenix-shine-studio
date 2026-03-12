@@ -19,9 +19,11 @@ const Navbar = () => {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 glass-effect border-b gold-border">
       <div className="container mx-auto px-6 py-3 flex items-center justify-between">
-        <Link to="/" className="flex items-center gap-3">
+        <Link to="/" className="flex items-center gap-3 group">
           <img src={logoImg} alt="Phoenix Logo" className="h-10 w-auto mix-blend-screen" />
-          <span className="font-display text-lg md:text-xl font-bold gold-text tracking-wide hidden sm:inline">
+          <span className="relative font-display text-lg md:text-xl font-bold tracking-wide hidden sm:inline overflow-hidden gold-text">
+            {/* Auto shine sweep */}
+            <span className="logo-shine-text absolute inset-0 bg-gradient-to-r from-transparent via-[hsl(43_80%_80%_/_0.7)] to-transparent pointer-events-none z-10" />
             Phoenix Glass & Mirror
           </span>
         </Link>
@@ -32,13 +34,17 @@ const Navbar = () => {
             <Link
               key={link.to}
               to={link.to}
-              className={`font-body text-xs tracking-widest uppercase transition-colors duration-300 ${
+              className={`relative font-body text-xs font-bold tracking-widest uppercase transition-all duration-300 group ${
                 location.pathname === link.to
-                  ? "text-primary"
-                  : "text-muted-foreground hover:text-primary"
+                  ? "gold-text"
+                  : "text-foreground/70 hover:text-primary"
               }`}
             >
               {link.label}
+              {/* Gold underline bar */}
+              <span className={`absolute -bottom-1 left-0 h-[1.5px] bg-gradient-to-r from-transparent via-primary to-transparent transition-all duration-300 ${
+                location.pathname === link.to ? "w-full opacity-100" : "w-0 opacity-0 group-hover:w-full group-hover:opacity-100"
+              }`} />
             </Link>
           ))}
         </div>
@@ -60,10 +66,10 @@ const Navbar = () => {
               key={link.to}
               to={link.to}
               onClick={() => setIsOpen(false)}
-              className={`block py-3 font-body text-sm tracking-widest uppercase ${
+              className={`block py-3 border-b border-border/20 last:border-0 font-body text-xs font-bold tracking-widest uppercase transition-colors duration-200 ${
                 location.pathname === link.to
-                  ? "text-primary"
-                  : "text-muted-foreground"
+                  ? "gold-text"
+                  : "text-foreground/60 hover:text-primary"
               }`}
             >
               {link.label}
