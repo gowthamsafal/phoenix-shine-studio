@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { Phone, Mail, MapPin } from "lucide-react";
-import phoenixLogo from "@/assets/phoenix-logo.jpg";
+import phoenixLogo from "@/assets/phoenix-logo.png";
 
 const Footer = () => (
   <footer className="bg-secondary border-t gold-border">
@@ -8,7 +8,7 @@ const Footer = () => (
       <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
         <div>
           <div className="flex items-center gap-3 mb-4">
-            <img src={phoenixLogo} alt="Phoenix Glass Logo" className="h-10 w-auto rounded" />
+            <img src={phoenixLogo} alt="Phoenix Glass Logo" className="h-10 w-auto mix-blend-screen" />
             <h3 className="font-display text-lg font-bold gold-text">
               Phoenix Glass & Mirror Inc
             </h3>
