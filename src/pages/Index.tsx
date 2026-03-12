@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom";
 import Layout from "@/components/Layout";
-import heroImg from "@/assets/hero-glass.jpg";
-import phoenixLogo from "@/assets/phoenix-logo.png";
+import heroImg from "@/assets/lp.png";
 import workShower from "@/assets/work-shower.jpg";
 import workMirror from "@/assets/work-mirror.jpg";
 import workStorefront from "@/assets/work-storefront.jpg";
@@ -22,23 +21,23 @@ const stats = [
 const Index = () => (
   <Layout>
     {/* Hero */}
-    <section className="relative h-[90vh] flex items-center justify-center overflow-hidden">
-      <img src={heroImg} alt="Luxury glass installation" className="absolute inset-0 w-full h-full object-cover" />
-      <div className="absolute inset-0 bg-background/70" />
+    <section className="hero-section relative h-[90vh] flex items-center justify-center overflow-hidden">
+      {/* Static full background — untouched */}
+      <img src={heroImg} alt="Luxury glass installation" className="hero-eagle absolute inset-0 w-full h-full object-cover" />
+      <div className="absolute inset-0 bg-background/60" />
+
+      {/* Gold glass reflection streaks */}
+      <div className="glass-reflection glass-reflection-1" />
+      <div className="glass-reflection glass-reflection-2" />
+      <div className="glass-reflection glass-reflection-3" />
+      <div className="glass-reflection glass-reflection-4" />
+
       <div className="relative z-10 text-center px-6 max-w-3xl">
-        {/* Animated Logo */}
-        <div className="mb-6 flex justify-center">
-          <img
-            src={phoenixLogo}
-            alt="Phoenix Logo"
-            className="h-28 md:h-36 w-auto animate-logo-rise mix-blend-screen"
-          />
-        </div>
-        <p className="text-primary font-body text-sm tracking-[0.3em] uppercase mb-4 animate-fade-in" style={{ animationDelay: "0.6s", opacity: 0 }}>Premium Glass Solutions</p>
+        <p className="text-primary font-body text-sm font-bold tracking-[0.3em] uppercase mb-4 animate-fade-in" style={{ animationDelay: "0.6s", opacity: 0 }}>Premium Glass Solutions</p>
         <h1 className="font-display text-4xl md:text-6xl lg:text-7xl font-bold text-foreground leading-tight mb-6 animate-fade-in" style={{ animationDelay: "0.8s", opacity: 0 }}>
           Phoenix Glass <span className="gold-text">&</span> Mirror Inc
         </h1>
-        <p className="text-muted-foreground text-lg mb-8 max-w-xl mx-auto animate-fade-in" style={{ animationDelay: "1s", opacity: 0 }}>
+        <p className="text-muted-foreground text-lg font-semibold mb-8 max-w-xl mx-auto animate-fade-in" style={{ animationDelay: "1s", opacity: 0 }}>
           Transforming spaces with precision-crafted glass and mirror installations since 2005.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in" style={{ animationDelay: "1.2s", opacity: 0 }}>

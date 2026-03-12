@@ -11,7 +11,7 @@ const testimonials = [
 ];
 
 const clients = [
-  "Grand Oasis Hotels", "Pinnacle Properties", "Azure Interior Design", "Metro Commercial Group",
+  "Sterling Glass Company", "Mattamy Homes", "Azure Interior Design", "Metro Commercial Group",
   "Sunstone Developments", "Elite Home Builders", "Canyon View Restaurants", "Desert Modern Architects",
 ];
 
