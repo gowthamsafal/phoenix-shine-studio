@@ -20,7 +20,7 @@ const Navbar = () => {
     <nav className="fixed top-0 left-0 right-0 z-50 glass-effect border-b gold-border">
       <div className="container mx-auto px-6 py-3 flex items-center justify-between">
         <Link to="/" className="flex items-center gap-3">
-          <img src={phoenixLogo} alt="Phoenix Glass Logo" className="h-10 w-auto rounded" />
+          <img src={phoenixLogo} alt="Phoenix Glass Logo" className="h-10 w-auto mix-blend-screen" />
           <span className="font-display text-lg md:text-xl font-bold gold-text tracking-wide hidden sm:inline">
             Phoenix Glass & Mirror
           </span>
