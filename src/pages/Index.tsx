@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import Layout from "@/components/Layout";
 import heroImg from "@/assets/hero-glass.jpg";
-import phoenixLogo from "@/assets/phoenix-logo.jpg";
+import phoenixLogo from "@/assets/phoenix-logo.png";
 import workShower from "@/assets/work-shower.jpg";
 import workMirror from "@/assets/work-mirror.jpg";
 import workStorefront from "@/assets/work-storefront.jpg";
