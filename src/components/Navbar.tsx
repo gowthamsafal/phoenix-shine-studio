@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
-import phoenixLogo from "@/assets/phoenix-logo.jpg";
+import phoenixLogo from "@/assets/phoenix-logo.png";
 
 const navLinks = [
   { to: "/", label: "Home" },

@@ -31,7 +31,7 @@ const Index = () => (
           <img
             src={phoenixLogo}
             alt="Phoenix Logo"
-            className="h-28 md:h-36 w-auto rounded-lg animate-logo-rise drop-shadow-[0_0_30px_hsl(43_50%_55%/0.4)]"
+            className="h-28 md:h-36 w-auto animate-logo-rise mix-blend-screen"
           />
         </div>
         <p className="text-primary font-body text-sm tracking-[0.3em] uppercase mb-4 animate-fade-in" style={{ animationDelay: "0.6s", opacity: 0 }}>Premium Glass Solutions</p>
