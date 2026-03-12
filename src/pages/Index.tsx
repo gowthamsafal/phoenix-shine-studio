@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import Layout from "@/components/Layout";
 import heroImg from "@/assets/hero-glass.jpg";
+import phoenixLogo from "@/assets/phoenix-logo.jpg";
 import workShower from "@/assets/work-shower.jpg";
 import workMirror from "@/assets/work-mirror.jpg";
 import workStorefront from "@/assets/work-storefront.jpg";
@@ -24,15 +25,23 @@ const Index = () => (
     <section className="relative h-[90vh] flex items-center justify-center overflow-hidden">
       <img src={heroImg} alt="Luxury glass installation" className="absolute inset-0 w-full h-full object-cover" />
       <div className="absolute inset-0 bg-background/70" />
-      <div className="relative z-10 text-center px-6 max-w-3xl animate-fade-in">
-        <p className="text-primary font-body text-sm tracking-[0.3em] uppercase mb-4">Premium Glass Solutions</p>
-        <h1 className="font-display text-4xl md:text-6xl lg:text-7xl font-bold text-foreground leading-tight mb-6">
+      <div className="relative z-10 text-center px-6 max-w-3xl">
+        {/* Animated Logo */}
+        <div className="mb-6 flex justify-center">
+          <img
+            src={phoenixLogo}
+            alt="Phoenix Logo"
+            className="h-28 md:h-36 w-auto rounded-lg animate-logo-rise drop-shadow-[0_0_30px_hsl(43_50%_55%/0.4)]"
+          />
+        </div>
+        <p className="text-primary font-body text-sm tracking-[0.3em] uppercase mb-4 animate-fade-in" style={{ animationDelay: "0.6s", opacity: 0 }}>Premium Glass Solutions</p>
+        <h1 className="font-display text-4xl md:text-6xl lg:text-7xl font-bold text-foreground leading-tight mb-6 animate-fade-in" style={{ animationDelay: "0.8s", opacity: 0 }}>
           Phoenix Glass <span className="gold-text">&</span> Mirror Inc
         </h1>
-        <p className="text-muted-foreground text-lg mb-8 max-w-xl mx-auto">
+        <p className="text-muted-foreground text-lg mb-8 max-w-xl mx-auto animate-fade-in" style={{ animationDelay: "1s", opacity: 0 }}>
           Transforming spaces with precision-crafted glass and mirror installations since 2005.
         </p>
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+        <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in" style={{ animationDelay: "1.2s", opacity: 0 }}>
           <Link to="/contact" className="gold-gradient text-primary-foreground font-body text-sm tracking-widest uppercase px-8 py-4 rounded transition-all hover:opacity-90">
             Get a Free Quote
           </Link>
@@ -77,8 +86,8 @@ const Index = () => (
           ))}
         </div>
         <div className="text-center mt-10">
-          <Link to="/our-works" className="inline-flex items-center gap-2 text-primary font-body text-sm tracking-widest uppercase hover:gap-3 transition-all">
-            See All Projects <ArrowRight size={16} />
+          <Link to="/services" className="inline-flex items-center gap-2 text-primary font-body text-sm tracking-widest uppercase hover:gap-3 transition-all">
+            View All Services <ArrowRight size={16} />
           </Link>
         </div>
       </div>

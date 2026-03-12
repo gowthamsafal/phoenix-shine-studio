@@ -1,14 +1,18 @@
 import { Link } from "react-router-dom";
 import { Phone, Mail, MapPin } from "lucide-react";
+import phoenixLogo from "@/assets/phoenix-logo.jpg";
 
 const Footer = () => (
   <footer className="bg-secondary border-t gold-border">
     <div className="container mx-auto px-6 py-12">
       <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
         <div>
-          <h3 className="font-display text-xl font-bold gold-text mb-4">
-            Phoenix Glass & Mirror Inc
-          </h3>
+          <div className="flex items-center gap-3 mb-4">
+            <img src={phoenixLogo} alt="Phoenix Glass Logo" className="h-10 w-auto rounded" />
+            <h3 className="font-display text-lg font-bold gold-text">
+              Phoenix Glass & Mirror Inc
+            </h3>
+          </div>
           <p className="text-muted-foreground text-sm leading-relaxed">
             Premium glass and mirror solutions for residential and commercial spaces. Crafting clarity since 2005.
           </p>
@@ -18,6 +22,7 @@ const Footer = () => (
           <div className="flex flex-col gap-2">
             {[
               { to: "/about", label: "About Us" },
+              { to: "/services", label: "Services" },
               { to: "/our-works", label: "Our Works" },
               { to: "/clients", label: "Clients" },
               { to: "/contact", label: "Contact Us" },
