@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { useRef, useEffect } from "react";
 import Layout from "@/components/Layout";
 import heroImg from "@/assets/lp.png";
 import workShower from "@/assets/work-shower.jpg";
@@ -18,18 +19,43 @@ const stats = [
   { icon: Clock, label: "Years Experience", value: "20+" },
 ];
 
-const Index = () => (
+const Index = () => {
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  useEffect(() => {
+    if (videoRef.current) {
+      videoRef.current.playbackRate = 0.65;
+    }
+  }, []);
+
+  return (
   <Layout>
     {/* Hero */}
-    <section className="hero-section relative h-[90vh] flex items-center justify-center overflow-hidden">
-      {/* Background image with slow drift */}
-      <img src={heroImg} alt="Luxury glass installation" className="hero-eagle absolute inset-0 w-full h-full object-cover" />
-
-      {/* 1. Lighter base overlay so image stays rich */}
-      <div className="absolute inset-0 bg-background/30" />
+    <section className="hero-section relative h-[90vh] flex items-center justify-center overflow-hidden bg-black">
+      {/* Video background */}
+      <video
+        ref={videoRef}
+        autoPlay
+        loop
+        muted
+        playsInline
+        className="absolute inset-0 w-full h-full object-cover mix-blend-screen opacity-80"
+      >
+        <source src="/Phoenix_Animation_With_Gold_Glass.mp4" type="video/mp4" />
+        {/* Fallback to image if video not supported */}
+        <img src={heroImg} alt="Luxury glass installation" className="hero-eagle absolute inset-0 w-full h-full object-cover" />
+      </video>
 
       {/* 2. Vignette */}
       <div className="hero-vignette absolute inset-0" />
+
+      {/* Glass shard color refractions — scattered light through cut glass */}
+      <div className="hero-glass-shard shard-blue-tl" />
+      <div className="hero-glass-shard shard-teal-tr" />
+      <div className="hero-glass-shard shard-crimson-bl" />
+      <div className="hero-glass-shard shard-amber-br" />
+      <div className="hero-glass-shard shard-violet-ml" />
+      <div className="hero-glass-shard shard-cyan-mr" />
 
       {/* 3. Large glass panel — right side bright reflection */}
       <div className="hero-mirror-panel" />
@@ -38,19 +64,16 @@ const Index = () => (
       <div className="hero-shimmer hero-shimmer-1" />
       <div className="hero-shimmer hero-shimmer-2" />
 
-      {/* 6. Floor mirror — strong glossy pool at bottom */}
+      {/* 5. Floor mirror — strong glossy pool at bottom */}
       <div className="hero-floor-mirror absolute bottom-0 left-0 right-0" />
 
-      {/* 7. Fine glass panel grid */}
-      <div className="hero-glass-grid absolute inset-0" />
-
-      {/* 8. Gold corner frame ornaments */}
+      {/* 6. Gold corner frame ornaments */}
       <div className="hero-corner hero-corner-tl" />
       <div className="hero-corner hero-corner-tr" />
       <div className="hero-corner hero-corner-bl" />
       <div className="hero-corner hero-corner-br" />
 
-      {/* 9. Top & bottom edge gold lines */}
+      {/* 7. Top & bottom edge gold lines */}
       <div className="absolute top-0 left-0 right-0 h-[1.5px] bg-gradient-to-r from-transparent via-primary/80 to-transparent z-10" />
       <div className="absolute bottom-0 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-primary/40 to-transparent z-10" />
 
@@ -131,6 +154,7 @@ const Index = () => (
       </div>
     </section>
   </Layout>
-);
+  );
+};
 
 export default Index;

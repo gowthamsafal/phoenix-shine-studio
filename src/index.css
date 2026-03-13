@@ -246,6 +246,67 @@
     pointer-events: none;
   }
 
+  /* ── Colored glass shard refractions ─────────────────────── */
+  .hero-glass-shard {
+    position: absolute;
+    pointer-events: none;
+    mix-blend-mode: screen;
+    border-radius: 40% 60% 70% 30% / 50% 40% 60% 50%;
+  }
+
+  .shard-blue-tl {
+    width: 22vw; height: 28vh;
+    top: 5%; left: 2%;
+    background: radial-gradient(ellipse at 60% 40%, hsl(210 90% 70% / 0.28) 0%, hsl(200 80% 80% / 0.12) 50%, transparent 75%);
+    animation: shard-drift-1 8s ease-in-out infinite;
+  }
+  .shard-teal-tr {
+    width: 20vw; height: 26vh;
+    top: 4%; right: 3%;
+    background: radial-gradient(ellipse at 40% 55%, hsl(175 80% 65% / 0.26) 0%, hsl(180 70% 75% / 0.10) 55%, transparent 75%);
+    animation: shard-drift-2 10s ease-in-out infinite;
+  }
+  .shard-crimson-bl {
+    width: 18vw; height: 22vh;
+    bottom: 12%; left: 5%;
+    background: radial-gradient(ellipse at 50% 40%, hsl(350 80% 65% / 0.22) 0%, hsl(340 70% 70% / 0.09) 55%, transparent 75%);
+    animation: shard-drift-3 9s ease-in-out infinite 1s;
+  }
+  .shard-amber-br {
+    width: 20vw; height: 24vh;
+    bottom: 10%; right: 4%;
+    background: radial-gradient(ellipse at 45% 45%, hsl(38 95% 65% / 0.30) 0%, hsl(45 90% 75% / 0.12) 55%, transparent 75%);
+    animation: shard-drift-1 11s ease-in-out infinite 2s;
+  }
+  .shard-violet-ml {
+    width: 14vw; height: 20vh;
+    top: 40%; left: 1%;
+    background: radial-gradient(ellipse at 55% 45%, hsl(270 75% 70% / 0.20) 0%, hsl(260 65% 75% / 0.08) 55%, transparent 75%);
+    animation: shard-drift-2 13s ease-in-out infinite 0.5s;
+  }
+  .shard-cyan-mr {
+    width: 14vw; height: 20vh;
+    top: 38%; right: 1%;
+    background: radial-gradient(ellipse at 45% 50%, hsl(190 85% 68% / 0.22) 0%, hsl(195 75% 78% / 0.09) 55%, transparent 75%);
+    animation: shard-drift-3 12s ease-in-out infinite 1.5s;
+  }
+
+  @keyframes shard-drift-1 {
+    0%,100% { transform: translate(0, 0)     rotate(0deg)  scale(1);    opacity: 1;   }
+    30%      { transform: translate(2%, -3%)  rotate(6deg)  scale(1.08); opacity: 0.7; }
+    65%      { transform: translate(-2%, 2%)  rotate(-4deg) scale(0.95); opacity: 0.9; }
+  }
+  @keyframes shard-drift-2 {
+    0%,100% { transform: translate(0, 0)     rotate(0deg)  scale(1);    opacity: 0.9; }
+    35%      { transform: translate(-3%, 2%)  rotate(-8deg) scale(1.1);  opacity: 0.6; }
+    70%      { transform: translate(2%, -3%)  rotate(5deg)  scale(0.92); opacity: 1;   }
+  }
+  @keyframes shard-drift-3 {
+    0%,100% { transform: translate(0, 0)     rotate(0deg)   scale(1);    opacity: 0.8; }
+    40%      { transform: translate(3%, 3%)   rotate(10deg)  scale(1.06); opacity: 1;   }
+    75%      { transform: translate(-2%, -2%) rotate(-6deg)  scale(0.97); opacity: 0.65;}
+  }
+
   /* Large glass panel — luminous wash on the right, like a tall mirror reflecting the room */
   .hero-mirror-panel {
     position: absolute;
