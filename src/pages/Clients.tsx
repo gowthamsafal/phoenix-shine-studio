@@ -1,5 +1,6 @@
 import Layout from "@/components/Layout";
 import { Star, Quote } from "lucide-react";
+import phoenixBg from "@/assets/Gemini_Generated_Image_ebvsvdebvsvdebvs.png";
 
 const testimonials = [
   { name: "Sarah Mitchell", role: "Homeowner", text: "Phoenix Glass transformed our bathroom with a stunning frameless shower enclosure. The craftsmanship is impeccable and their team was incredibly professional.", rating: 5 },
@@ -27,8 +28,18 @@ const Clients = () => (
       </div>
     </section>
 
-    <section className="py-12 md:py-20">
-      <div className="container mx-auto px-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+    <section className="relative py-12 md:py-20 overflow-hidden">
+      {/* Faint phoenix watermark */}
+      <div
+        className="absolute inset-0 pointer-events-none opacity-[0.12]"
+        style={{
+          backgroundImage: `url(${phoenixBg})`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
+        }}
+      />
+      <div className="relative container mx-auto px-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
         {testimonials.map((t) => (
           <div key={t.name} className="bg-card border gold-border rounded p-6 flex flex-col">
             <Quote size={24} className="text-primary/30 mb-4" />
