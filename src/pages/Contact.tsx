@@ -19,10 +19,12 @@ const Contact = () => {
   const [form, setForm] = useState({ name: "", email: "", phone: "", message: "" });
   const [sending, setSending] = useState(false);
   const [submitted, setSubmitted] = useState(false);
+  const [error, setError] = useState("");
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setSending(true);
+    setError("");
     try {
       await emailjs.send(
         EMAILJS_SERVICE_ID,
@@ -37,7 +39,7 @@ const Contact = () => {
       );
       setSubmitted(true);
     } catch {
-      toast.error("Failed to send message. Please try again or call us directly.");
+      setError("Failed to send. Please try again or call us directly at (555) 123-4567.");
     } finally {
       setSending(false);
     }
@@ -111,6 +113,9 @@ const Contact = () => {
               >
                 {sending ? "Sending..." : "Send Message"}
               </button>
+              {error && (
+                <p className="text-red-400 text-sm text-center">{error}</p>
+              )}
             </form>
             </>
             )}
