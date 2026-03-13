@@ -53,6 +53,7 @@ const Navbar = () => {
         <button
           onClick={() => setIsOpen(!isOpen)}
           className="lg:hidden text-primary"
+          aria-label={isOpen ? "Close menu" : "Open menu"}
         >
           {isOpen ? <X size={24} /> : <Menu size={24} />}
         </button>

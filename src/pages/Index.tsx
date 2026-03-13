@@ -103,7 +103,7 @@ const Index = () => (
           {services.map((s) => (
             <div key={s.title} className="group bg-card rounded overflow-hidden border gold-border hover:border-primary/50 transition-all duration-300">
               <div className="overflow-hidden h-56">
-                <img src={s.image} alt={s.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                <img src={s.image} alt={s.title} loading="lazy" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
               </div>
               <div className="p-6">
                 <h3 className="font-display text-xl font-semibold text-foreground mb-2">{s.title}</h3>

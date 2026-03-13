@@ -50,19 +50,27 @@ const OurWorks = () => {
       </section>
 
       <section className="py-12 md:py-20">
-        <div className="container mx-auto px-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
-          {filtered.map((p) => (
-            <div key={p.title} className="group bg-card rounded overflow-hidden border gold-border hover:border-primary/50 transition-all duration-300">
-              <div className="overflow-hidden h-64">
-                <img src={p.image} alt={p.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
-              </div>
-              <div className="p-6">
-                <span className="text-primary text-xs tracking-widest uppercase">{p.category}</span>
-                <h3 className="font-display text-lg font-semibold text-foreground mt-1 mb-2">{p.title}</h3>
-                <p className="text-muted-foreground text-sm">{p.desc}</p>
-              </div>
+        <div className="container mx-auto px-6">
+          {filtered.length === 0 ? (
+            <div className="text-center py-20">
+              <p className="text-muted-foreground text-sm">No projects found in this category.</p>
             </div>
-          ))}
+          ) : (
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+              {filtered.map((p) => (
+                <div key={p.title} className="group bg-card rounded overflow-hidden border gold-border hover:border-primary/50 transition-all duration-300">
+                  <div className="overflow-hidden h-64">
+                    <img src={p.image} alt={p.title} loading="lazy" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                  </div>
+                  <div className="p-6">
+                    <span className="text-primary text-xs tracking-widest uppercase">{p.category}</span>
+                    <h3 className="font-display text-lg font-semibold text-foreground mt-1 mb-2">{p.title}</h3>
+                    <p className="text-muted-foreground text-sm">{p.desc}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          )}
         </div>
       </section>
     </Layout>

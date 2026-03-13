@@ -77,35 +77,42 @@ const Contact = () => {
             <form onSubmit={handleSubmit} className="flex flex-col gap-5">
               <input
                 type="text"
-                placeholder="Your Name"
+                placeholder="Your Name *"
                 required
+                maxLength={100}
                 value={form.name}
                 onChange={(e) => setForm({ ...form, name: e.target.value })}
                 className="bg-secondary border gold-border rounded px-4 py-3 text-foreground text-sm placeholder:text-muted-foreground focus:outline-none focus:border-primary transition-colors"
               />
               <input
                 type="email"
-                placeholder="Your Email"
+                placeholder="Your Email *"
                 required
+                maxLength={200}
                 value={form.email}
                 onChange={(e) => setForm({ ...form, email: e.target.value })}
                 className="bg-secondary border gold-border rounded px-4 py-3 text-foreground text-sm placeholder:text-muted-foreground focus:outline-none focus:border-primary transition-colors"
               />
               <input
                 type="tel"
-                placeholder="Your Phone"
+                placeholder="Your Phone (e.g. 555-123-4567)"
+                maxLength={20}
+                pattern="[0-9+\-\s\(\)]*"
+                title="Please enter a valid phone number"
                 value={form.phone}
                 onChange={(e) => setForm({ ...form, phone: e.target.value })}
                 className="bg-secondary border gold-border rounded px-4 py-3 text-foreground text-sm placeholder:text-muted-foreground focus:outline-none focus:border-primary transition-colors"
               />
               <textarea
-                placeholder="Tell us about your project..."
+                placeholder="Tell us about your project... *"
                 required
                 rows={5}
+                maxLength={2000}
                 value={form.message}
                 onChange={(e) => setForm({ ...form, message: e.target.value })}
                 className="bg-secondary border gold-border rounded px-4 py-3 text-foreground text-sm placeholder:text-muted-foreground focus:outline-none focus:border-primary transition-colors resize-none"
               />
+              <p className="text-muted-foreground text-xs -mt-2">* Required fields</p>
               <button
                 type="submit"
                 disabled={sending}
