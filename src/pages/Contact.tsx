@@ -1,7 +1,12 @@
 import { useState } from "react";
+import emailjs from "@emailjs/browser";
 import Layout from "@/components/Layout";
 import { Phone, Mail, MapPin, Clock, Instagram } from "lucide-react";
 import { toast } from "sonner";
+
+const EMAILJS_SERVICE_ID = "service_xr6wq9b";
+const EMAILJS_TEMPLATE_ID = "template_n48shdn";
+const EMAILJS_PUBLIC_KEY = "8K7EycbaXAPwlib5F";
 
 const contactInfo = [
   { icon: Phone, label: "Phone", value: "(555) 123-4567", href: "tel:+15551234567" },
@@ -12,11 +17,30 @@ const contactInfo = [
 
 const Contact = () => {
   const [form, setForm] = useState({ name: "", email: "", phone: "", message: "" });
+  const [sending, setSending] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    toast.success("Thank you! We'll get back to you within 24 hours.");
-    setForm({ name: "", email: "", phone: "", message: "" });
+    setSending(true);
+    try {
+      await emailjs.send(
+        EMAILJS_SERVICE_ID,
+        EMAILJS_TEMPLATE_ID,
+        {
+          from_name: form.name,
+          from_email: form.email,
+          phone: form.phone,
+          message: form.message,
+        },
+        EMAILJS_PUBLIC_KEY
+      );
+      toast.success("Message sent! We'll get back to you within 24 hours.");
+      setForm({ name: "", email: "", phone: "", message: "" });
+    } catch {
+      toast.error("Failed to send message. Please try again or call us directly.");
+    } finally {
+      setSending(false);
+    }
   };
 
   return (
@@ -70,9 +94,10 @@ const Contact = () => {
               />
               <button
                 type="submit"
-                className="gold-gradient text-primary-foreground font-body text-sm tracking-widest uppercase px-8 py-4 rounded hover:opacity-90 transition-all"
+                disabled={sending}
+                className="gold-gradient text-primary-foreground font-body text-sm tracking-widest uppercase px-8 py-4 rounded hover:opacity-90 transition-all disabled:opacity-60 disabled:cursor-not-allowed"
               >
-                Send Message
+                {sending ? "Sending..." : "Send Message"}
               </button>
             </form>
           </div>
