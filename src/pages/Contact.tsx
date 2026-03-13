@@ -18,6 +18,7 @@ const contactInfo = [
 const Contact = () => {
   const [form, setForm] = useState({ name: "", email: "", phone: "", message: "" });
   const [sending, setSending] = useState(false);
+  const [submitted, setSubmitted] = useState(false);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -34,8 +35,7 @@ const Contact = () => {
         },
         EMAILJS_PUBLIC_KEY
       );
-      toast.success("Message sent! We'll get back to you within 24 hours.");
-      setForm({ name: "", email: "", phone: "", message: "" });
+      setSubmitted(true);
     } catch {
       toast.error("Failed to send message. Please try again or call us directly.");
     } finally {
@@ -59,6 +59,18 @@ const Contact = () => {
         <div className="container mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
           {/* Form */}
           <div className="bg-card border gold-border rounded p-5 sm:p-6 md:p-8">
+            {submitted ? (
+              <div className="flex flex-col items-center justify-center h-full min-h-[320px] text-center gap-6">
+                <div className="gold-gradient p-5 rounded-full">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="text-primary-foreground"><polyline points="20 6 9 17 4 12"/></svg>
+                </div>
+                <div>
+                  <h2 className="font-display text-2xl font-bold text-foreground mb-3">Thank You!</h2>
+                  <p className="text-foreground/80 text-base">Thank you, we will get back to you soon!</p>
+                </div>
+              </div>
+            ) : (
+            <>
             <h2 className="font-display text-2xl font-bold text-foreground mb-6">Send Us a Message</h2>
             <form onSubmit={handleSubmit} className="flex flex-col gap-5">
               <input
@@ -100,6 +112,8 @@ const Contact = () => {
                 {sending ? "Sending..." : "Send Message"}
               </button>
             </form>
+            </>
+            )}
           </div>
 
           {/* Info */}
