@@ -21,8 +21,22 @@ const Index = () => {
   return (
   <Layout>
     {/* Hero */}
-    <section className="hero-section h-[55vh] flex items-center justify-center bg-background px-6">
-      <div className="text-center">
+    <section className="hero-section relative h-[65vh] flex items-center justify-center overflow-hidden bg-background px-6">
+      <div className="absolute inset-0 grid grid-cols-1 md:grid-cols-3">
+        <div className="relative h-full">
+          <img src={workShower} alt="Shower enclosure glass" className="h-full w-full object-cover" />
+        </div>
+        <div className="relative hidden md:block h-full">
+          <img src={workMirror} alt="Decorative mirror glass" className="h-full w-full object-cover" />
+        </div>
+        <div className="relative hidden md:block h-full">
+          <img src={workStorefront} alt="Commercial storefront glass" className="h-full w-full object-cover" />
+        </div>
+      </div>
+      <div className="absolute inset-0 bg-background/60" />
+      <div className="absolute inset-0 bg-gradient-to-b from-background/40 via-background/55 to-background/75" />
+
+      <div className="relative z-10 text-center">
         <h1 className="font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-foreground leading-tight">
           Phoenix Glass <span className="gold-text">&</span> Mirror Inc
         </h1>
