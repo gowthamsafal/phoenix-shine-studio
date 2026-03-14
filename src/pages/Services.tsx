@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import Layout from "@/components/Layout";
-import { Droplets, Frame, Building2, Fence, GlassWater, DoorOpen, Layers, Wrench, ArrowRight } from "lucide-react";
+import { Droplets, Frame, Building2, Fence, GlassWater, DoorOpen, House, Layers, Wrench, Wine, ArrowRight } from "lucide-react";
 
 const services = [
   {
@@ -38,6 +38,24 @@ const services = [
     title: "Glass Partitions",
     desc: "Office and residential glass partitions that create open, light-filled spaces. Available in clear, frosted, or switchable privacy glass.",
     features: ["Sliding & fixed systems", "Privacy glass options", "Sound reduction", "Custom branding"],
+  },
+  {
+    icon: House,
+    title: "Porch Enclosures",
+    desc: "Custom glass porch enclosures that extend your living space while preserving views, natural light, and weather protection throughout the seasons.",
+    features: ["Sliding and fixed panel options", "Weather-resistant systems", "Tempered safety glass", "Custom-fit installations"],
+  },
+  {
+    icon: Wine,
+    title: "Residential Wine Cellar Glass",
+    desc: "Custom insulated wine cellar enclosures for homes, including full-height glass walls and doors designed to maintain temperature while showcasing your collection.",
+    features: ["Insulated glass systems", "Thermal-sealed doors", "Anti-condensation options", "Custom sizes & finishes"],
+  },
+  {
+    icon: Wine,
+    title: "Commercial Wine Cellar Displays",
+    desc: "Statement wine cellar glass systems for restaurants, bars, and hospitality venues with durable hardware and premium display-focused detailing.",
+    features: ["High-traffic rated hardware", "Display-ready layouts", "Custom branding options", "Code-compliant installations"],
   },
   {
     icon: Layers,

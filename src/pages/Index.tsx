@@ -1,7 +1,5 @@
 import { Link } from "react-router-dom";
-import { useRef, useEffect } from "react";
 import Layout from "@/components/Layout";
-import heroImg from "@/assets/lp.png";
 import workShower from "@/assets/work-shower.jpg";
 import workMirror from "@/assets/work-mirror.jpg";
 import workStorefront from "@/assets/work-storefront.jpg";
@@ -16,81 +14,21 @@ const services = [
 const stats = [
   { icon: Shield, label: "Licensed & Insured", value: "100%" },
   { icon: Award, label: "Projects Completed", value: "2,500+" },
-  { icon: Clock, label: "Years Experience", value: "20+" },
+  { icon: Clock, label: "Years Experience", value: "9+" },
 ];
 
 const Index = () => {
-  const videoRef = useRef<HTMLVideoElement>(null);
-
-  useEffect(() => {
-    if (videoRef.current) {
-      videoRef.current.playbackRate = 0.65;
-    }
-  }, []);
-
   return (
   <Layout>
     {/* Hero */}
-    <section className="hero-section relative h-[90vh] flex items-center justify-center overflow-hidden bg-black">
-      {/* Video background */}
-      <video
-        ref={videoRef}
-        autoPlay
-        loop
-        muted
-        playsInline
-        className="absolute inset-0 w-full h-full object-cover mix-blend-screen opacity-80"
-      >
-        <source src="/Phoenix_Animation_With_Gold_Glass.mp4" type="video/mp4" />
-        {/* Fallback to image if video not supported */}
-        <img src={heroImg} alt="Luxury glass installation" className="hero-eagle absolute inset-0 w-full h-full object-cover" />
-      </video>
-
-      {/* 2. Vignette */}
-      <div className="hero-vignette absolute inset-0" />
-
-      {/* Glass shard color refractions — scattered light through cut glass */}
-      <div className="hero-glass-shard shard-blue-tl" />
-      <div className="hero-glass-shard shard-teal-tr" />
-      <div className="hero-glass-shard shard-crimson-bl" />
-      <div className="hero-glass-shard shard-amber-br" />
-      <div className="hero-glass-shard shard-violet-ml" />
-      <div className="hero-glass-shard shard-cyan-mr" />
-
-      {/* 3. Large glass panel — right side bright reflection */}
-      <div className="hero-mirror-panel" />
-
-      {/* 4. Horizontal shimmer bands — like reflections across a glass wall */}
-      <div className="hero-shimmer hero-shimmer-1" />
-      <div className="hero-shimmer hero-shimmer-2" />
-
-      {/* 5. Floor mirror — strong glossy pool at bottom */}
-      <div className="hero-floor-mirror absolute bottom-0 left-0 right-0" />
-
-      {/* 6. Gold corner frame ornaments */}
-      <div className="hero-corner hero-corner-tl" />
-      <div className="hero-corner hero-corner-tr" />
-      <div className="hero-corner hero-corner-bl" />
-      <div className="hero-corner hero-corner-br" />
-
-      {/* 7. Top & bottom edge gold lines */}
-      <div className="absolute top-0 left-0 right-0 h-[1.5px] bg-gradient-to-r from-transparent via-primary/80 to-transparent z-10" />
-      <div className="absolute bottom-0 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-primary/40 to-transparent z-10" />
-
-      <div className="relative z-10 text-center px-6 max-w-3xl">
-        <p className="text-primary font-body text-sm font-bold tracking-[0.3em] uppercase mb-4 animate-fade-in" style={{ animationDelay: "0.6s", opacity: 0 }}>Premium Glass Solutions</p>
-        <h1 className="font-display text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold text-foreground leading-tight mb-6 animate-fade-in" style={{ animationDelay: "0.8s", opacity: 0 }}>
+    <section className="hero-section h-[55vh] flex items-center justify-center bg-background px-6">
+      <div className="text-center">
+        <h1 className="font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-foreground leading-tight">
           Phoenix Glass <span className="gold-text">&</span> Mirror Inc
         </h1>
-        <p className="text-foreground text-base md:text-lg font-semibold mb-8 max-w-xl mx-auto animate-fade-in drop-shadow-[0_1px_8px_rgba(0,0,0,0.9)]" style={{ animationDelay: "1s", opacity: 0 }}>
-          Transforming spaces with precision-crafted glass and mirror installations since 2005.
-        </p>
-        <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in" style={{ animationDelay: "1.2s", opacity: 0 }}>
-          <Link to="/contact" className="gold-gradient text-primary-foreground font-body text-sm tracking-widest uppercase px-8 py-4 rounded transition-all hover:opacity-90">
-            Get a Free Quote
-          </Link>
-          <Link to="/our-works" className="border border-primary/30 text-primary font-body font-bold text-sm tracking-widest uppercase px-8 py-4 rounded hover:bg-primary/10 transition-all">
-            View Our Work
+        <div className="mt-8">
+          <Link to="/contact" className="gold-gradient text-primary-foreground font-body text-sm tracking-widest uppercase px-8 py-4 rounded hover:opacity-90 transition-all inline-block">
+            Get a Quote
           </Link>
         </div>
       </div>

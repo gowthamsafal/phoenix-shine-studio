@@ -12,8 +12,12 @@ const testimonials = [
 ];
 
 const clients = [
-  "Sterling Glass Company", "Mattamy Homes", "Azure Interior Design", "Metro Commercial Group",
-  "Sunstone Developments", "Elite Home Builders", "Canyon View Restaurants", "Desert Modern Architects",
+  "Sterling Glass Company",
+  "Mattamy Homes",
+  "Fmf glass hardware",
+  "Sensus design build",
+  "Raja builders",
+  "Flato Inc",
 ];
 
 const Clients = () => (

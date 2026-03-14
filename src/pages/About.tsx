@@ -5,7 +5,7 @@ import { CheckCircle } from "lucide-react";
 const values = [
   "Premium quality materials and craftsmanship",
   "Licensed, bonded, and fully insured",
-  "20+ years of industry expertise",
+  "Since 2017: trusted industry expertise",
   "Custom solutions for every project",
   "On-time delivery and installation",
   "Exceptional customer service",
@@ -19,7 +19,7 @@ const About = () => (
         <p className="text-primary font-body text-sm tracking-[0.3em] uppercase mb-2">Our Story</p>
         <h1 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4">About Us</h1>
         <p className="text-foreground/80 max-w-2xl mx-auto">
-          Phoenix Glass and Mirror Inc has been the trusted name in glass solutions across Arizona for over two decades.
+          Since 2017, Phoenix Glass and Mirror Inc has been a trusted name in glass solutions across Arizona.
         </p>
       </div>
     </section>
@@ -35,10 +35,10 @@ const About = () => (
             Crafting <span className="gold-text">Excellence</span> in Glass
           </h2>
           <p className="text-muted-foreground mb-4 leading-relaxed">
-            Founded in 2005, Phoenix Glass and Mirror Inc began with a simple mission: to deliver the highest quality glass and mirror solutions with unmatched craftsmanship. What started as a small family operation has grown into one of Arizona's most trusted glass companies.
+            Founded in 2017, Phoenix Glass and Mirror Inc began with a simple mission: to deliver the highest quality glass and mirror solutions with unmatched craftsmanship. What started as a small family operation has grown into one of Arizona's trusted glass companies.
           </p>
           <p className="text-muted-foreground mb-8 leading-relaxed">
-            Our team of skilled artisans and technicians bring decades of combined experience to every project — from custom shower enclosures and decorative mirrors to commercial storefronts and architectural glass installations.
+            Our team of skilled artisans and technicians bring years of combined experience to every project, from custom shower enclosures and decorative mirrors to commercial storefronts and architectural glass installations.
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
             {values.map((v) => (

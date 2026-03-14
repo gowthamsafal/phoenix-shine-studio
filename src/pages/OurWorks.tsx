@@ -13,9 +13,11 @@ const projects = [
   { title: "Frameless Shower Enclosure", category: "Residential", image: workShower, desc: "Custom frameless glass shower for luxury bathroom renovation." },
   { title: "Grand Foyer Mirror", category: "Residential", image: workMirror, desc: "Oversized decorative mirror with gold-leaf frame installation." },
   { title: "Modern Glass Storefront", category: "Commercial", image: workStorefront, desc: "Full glass facade for downtown retail space." },
+  { title: "Residential Wine Cellar Enclosure", category: "Residential", image: "https://buildersglassbonita.com/wp-content/uploads/2021/09/fullsizeoutput_6439-scaled.jpeg", desc: "Insulated glass wine cellar enclosure with custom door and premium hardware." },
   { title: "Balcony Glass Railing", category: "Residential", image: workRailing, desc: "Frameless glass balustrade for high-rise apartment." },
   { title: "Custom Glass Tabletop", category: "Residential", image: workTabletop, desc: "Precision-cut tempered glass tabletop for dining room." },
   { title: "Office Glass Partition", category: "Commercial", image: workPartition, desc: "Frosted and clear glass partition walls for corporate office." },
+  { title: "Commercial Wine Display Cellar", category: "Commercial", image: "https://i.pinimg.com/736x/8c/69/94/8c69949842847c21b0134a8bfacd6b23.jpg", desc: "Feature wine display cellar for a hospitality venue with high-durability glazing." },
 ];
 
 const OurWorks = () => {

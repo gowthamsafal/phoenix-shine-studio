@@ -9,10 +9,10 @@ const EMAILJS_TEMPLATE_ID = "template_n48shdn";
 const EMAILJS_PUBLIC_KEY = "8K7EycbaXAPwlib5F";
 
 const contactInfo = [
-  { icon: Phone, label: "Phone", value: "(555) 123-4567", href: "tel:+15551234567" },
-  { icon: Mail, label: "Email", value: "info@phoenixglass.com", href: "mailto:info@phoenixglass.com" },
-  { icon: MapPin, label: "Address", value: "123 Glass Avenue, Phoenix, AZ 85001", href: "https://maps.google.com/maps?q=123+Glass+Avenue+Phoenix+AZ+85001" },
-  { icon: Clock, label: "Hours", value: "Mon–Fri: 8AM–6PM | Sat: 9AM–2PM", href: null },
+  { icon: Phone, label: "Phone", value: "9803562966", href: "tel:+19803562966" },
+  { icon: Mail, label: "Email", value: "phoenixglassandmirror@gmail.com", href: "mailto:phoenixglassandmirror@gmail.com" },
+  { icon: MapPin, label: "Address", value: "Elmer Moss Ave, Caledon, ON L7C 3H1", href: "https://maps.google.com/maps?q=Elmer+Moss+Ave+Caledon+ON+L7C+3H1" },
+  { icon: Clock, label: "Hours", value: "Mon to Sat 9-7", href: null },
 ];
 
 const Contact = () => {
@@ -39,7 +39,7 @@ const Contact = () => {
       );
       setSubmitted(true);
     } catch {
-      setError("Failed to send. Please try again or call us directly at (555) 123-4567.");
+      setError("Failed to send. Please try again or call us directly at 9803562966.");
     } finally {
       setSending(false);
     }
@@ -165,8 +165,8 @@ const Contact = () => {
               {/* Gold bottom reflection line */}
               <div className="absolute bottom-0 left-0 right-0 h-[1.5px] bg-gradient-to-r from-transparent via-primary to-transparent z-10 opacity-90" />
               <iframe
-                title="Phoenix Glass and Mirror Location"
-                src="https://maps.google.com/maps?q=Phoenix+Glass+and+Mirror+Inc+Phoenix+AZ&output=embed&z=15"
+                title="Phoenix Glass and Mirror Store Location"
+                src="https://maps.google.com/maps?q=Elmer+Moss+Ave+Caledon+ON+L7C+3H1&output=embed&z=15"
                 width="100%"
                 height="300"
                 style={{ border: 0, display: "block" }}
@@ -182,7 +182,7 @@ const Contact = () => {
               <h3 className="font-display text-lg font-bold text-foreground mb-4">Follow Us</h3>
               <div className="flex flex-wrap gap-3">
                 <a
-                  href="https://www.instagram.com/phoenixglassandmirror"
+                  href="https://www.instagram.com/phoenix_glass_and_mirror_inc"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-2 gold-gradient px-4 py-3 rounded hover:opacity-90 transition-all"
@@ -191,7 +191,7 @@ const Contact = () => {
                   <span className="text-primary-foreground font-body text-sm tracking-wider">Instagram</span>
                 </a>
                 <a
-                  href="https://www.facebook.com/phoenixglassandmirror"
+                  href="https://www.facebook.com/phoenix.mirrors.2025"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-2 gold-gradient px-4 py-3 rounded hover:opacity-90 transition-all"

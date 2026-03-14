@@ -14,7 +14,7 @@ const Footer = () => (
             </h3>
           </div>
           <p className="text-muted-foreground text-sm leading-relaxed">
-            Premium glass and mirror solutions for residential and commercial spaces. Crafting clarity since 2005.
+            Premium glass and mirror solutions for residential and commercial spaces. Crafting clarity since 2017.
           </p>
         </div>
         <div>
@@ -48,12 +48,12 @@ const Footer = () => (
           </h4>
           <div className="h-[1.5px] w-10 bg-gradient-to-r from-primary to-transparent mb-5" />
           <div className="flex flex-col gap-3 text-sm text-muted-foreground">
-            <a href="tel:+15551234567" className="flex items-center gap-2 hover:text-primary transition-colors"><Phone size={14} className="text-primary shrink-0" /> (555) 123-4567</a>
-            <a href="mailto:info@phoenixglass.com" className="flex items-center gap-2 hover:text-primary transition-colors"><Mail size={14} className="text-primary shrink-0" /> info@phoenixglass.com</a>
-            <a href="https://maps.google.com/maps?q=123+Glass+Avenue+Phoenix+AZ" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 hover:text-primary transition-colors"><MapPin size={14} className="text-primary shrink-0" /> 123 Glass Avenue, Phoenix, AZ</a>
+            <a href="tel:+19803562966" className="flex items-center gap-2 hover:text-primary transition-colors"><Phone size={14} className="text-primary shrink-0" /> 9803562966</a>
+            <a href="mailto:phoenixglassandmirror@gmail.com" className="flex items-center gap-2 hover:text-primary transition-colors"><Mail size={14} className="text-primary shrink-0" /> phoenixglassandmirror@gmail.com</a>
+            <a href="https://maps.google.com/maps?q=Elmer+Moss+Ave+Caledon+ON+L7C+3H1" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 hover:text-primary transition-colors"><MapPin size={14} className="text-primary shrink-0" /> Elmer Moss Ave, Caledon, ON L7C 3H1</a>
             <div className="flex gap-3 mt-2">
               <a
-                href="https://www.instagram.com/phoenixglassandmirror"
+                href="https://www.instagram.com/phoenix_glass_and_mirror_inc"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center justify-center w-8 h-8 rounded border gold-border hover:border-primary hover:text-primary text-muted-foreground transition-colors"
@@ -62,7 +62,7 @@ const Footer = () => (
                 <Instagram size={14} />
               </a>
               <a
-                href="https://www.facebook.com/phoenixglassandmirror"
+                href="https://www.facebook.com/phoenix.mirrors.2025"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center justify-center w-8 h-8 rounded border gold-border hover:border-primary hover:text-primary text-muted-foreground transition-colors"
