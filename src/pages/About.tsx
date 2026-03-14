@@ -1,5 +1,5 @@
 import Layout from "@/components/Layout";
-import aboutTeam from "@/assets/about-team.jpg";
+import heroGlass from "@/assets/hero-glass.jpg";
 import { CheckCircle } from "lucide-react";
 
 const values = [
@@ -28,7 +28,7 @@ const About = () => (
     <section className="py-12 md:py-20">
       <div className="container mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
         <div className="rounded overflow-hidden">
-          <img src={aboutTeam} alt="Our team at work" className="w-full h-full object-cover rounded" />
+          <img src={heroGlass} alt="Phoenix Glass and Mirror team and glass work" className="w-full h-full object-cover rounded" />
         </div>
         <div>
           <h2 className="font-display text-2xl md:text-3xl font-bold text-foreground mb-6">
