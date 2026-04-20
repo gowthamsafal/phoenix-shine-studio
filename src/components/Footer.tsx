@@ -1,14 +1,14 @@
 import { Link } from "react-router-dom";
 import { Phone, Mail, MapPin, Instagram } from "lucide-react";
-import phoenixLogo from "@/assets/logo.jpg";
+import phoenixLogo from "@/assets/new.jpeg";
 
 const Footer = () => (
   <footer className="bg-secondary border-t gold-border">
     <div className="container mx-auto px-6 py-8 md:py-12">
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-10">
         <div>
-          <div className="flex items-center gap-3 mb-4">
-            <img src={phoenixLogo} alt="Phoenix Glass Logo" className="h-10 w-auto mix-blend-screen" />
+          <div className="flex items-center gap-3.5 mb-4">
+            <img src={phoenixLogo} alt="Phoenix Glass Logo" className="h-12 md:h-14 w-auto mix-blend-screen brand-logo" />
             <h3 className="font-display text-lg font-bold gold-text">
               Phoenix Glass & Mirror Inc
             </h3>

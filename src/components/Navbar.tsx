@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
-import logoImg from "@/assets/logo.jpg";
+import logoImg from "@/assets/new.jpeg";
 
 const navLinks = [
   { to: "/", label: "Home" },
@@ -19,9 +19,11 @@ const Navbar = () => {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 glass-effect border-b gold-border">
       <div className="container mx-auto px-6 py-3 flex items-center justify-between">
-        <Link to="/" className="flex items-center gap-3 group">
-          <img src={logoImg} alt="Phoenix Logo" className="h-10 w-auto mix-blend-screen" />
-          <span className="relative font-display text-lg md:text-xl font-bold tracking-wide hidden sm:inline overflow-hidden gold-text">
+        <Link to="/" className="flex items-center gap-3 md:gap-4 group">
+          <span className="flex h-12 w-12 md:h-14 md:w-14 items-center justify-center rounded border gold-border bg-secondary/70 p-1.5 md:p-2">
+            <img src={logoImg} alt="Phoenix Logo" className="h-full w-full object-contain brand-logo" />
+          </span>
+          <span className="relative font-display text-base md:text-xl font-bold tracking-wide overflow-hidden gold-text leading-none">
             {/* Auto shine sweep */}
             <span className="logo-shine-text absolute inset-0 bg-gradient-to-r from-transparent via-[hsl(43_80%_80%_/_0.7)] to-transparent pointer-events-none z-10" />
             Phoenix Glass & Mirror
