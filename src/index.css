@@ -88,7 +88,7 @@
 
   .glass-effect {
     backdrop-filter: blur(12px);
-    background: hsl(30 10% 8% / 0.85);
+    background: hsl(0 0% 0%);
   }
 
   .animate-logo-rise {

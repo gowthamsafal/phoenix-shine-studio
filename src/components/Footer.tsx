@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { Phone, Mail, MapPin, Instagram } from "lucide-react";
-import phoenixLogo from "@/assets/new.jpeg";
+import phoenixLogo from "@/assets/new2.jpg";
 
 const Footer = () => (
   <footer className="bg-secondary border-t gold-border">
