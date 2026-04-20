@@ -22,7 +22,23 @@ jobs:
         run: npm ci
 
       - name: Deploy to Vercel
-        run: npx vercel --prod --token=${{ secrets.VERCEL_TOKEN }} --yes
+        shell: bash
+        run: |
+          set -euo pipefail
+          for attempt in 1 2 3; do
+            echo "Deploy attempt ${attempt}/3"
+            if npx vercel@latest --prod --token="${{ secrets.VERCEL_TOKEN }}" --yes; then
+              exit 0
+            fi
+
+            if [ "${attempt}" -lt 3 ]; then
+              echo "Vercel deploy failed (attempt ${attempt}). Retrying in 15 seconds..."
+              sleep 15
+            fi
+          done
+
+          echo "Vercel deployment failed after 3 attempts."
+          exit 1
         env:
           VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
           VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
