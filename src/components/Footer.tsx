@@ -49,7 +49,7 @@ const Footer = () => (
           <div className="h-[1.5px] w-10 bg-gradient-to-r from-primary to-transparent mb-5" />
           <div className="flex flex-col gap-3 text-sm text-muted-foreground">
             <a href="tel:+17059776670" className="flex items-center gap-2 hover:text-primary transition-colors"><Phone size={14} className="text-primary shrink-0" /> +1 7059776670</a>
-            <a href="mailto:phoenixglassandmirror@gmail.com" className="flex items-center gap-2 hover:text-primary transition-colors"><Mail size={14} className="text-primary shrink-0" /> phoenixglassandmirror@gmail.com</a>
+            <a href="mailto:phoenixglassandmirror@gmail.com" className="flex items-center gap-2 hover:text-primary transition-colors break-all"><Mail size={14} className="text-primary shrink-0" /> phoenixglassandmirror@gmail.com</a>
             <a href="https://maps.google.com/maps?q=58+Elmer+Moss+Avenue,+Caledon" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 hover:text-primary transition-colors"><MapPin size={14} className="text-primary shrink-0" /> 58 Elmer Moss Avenue, Caledon</a>
             <div className="flex gap-3 mt-2">
               <a

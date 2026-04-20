@@ -95,6 +95,8 @@ const Contact = () => {
               />
               <input
                 type="tel"
+                inputMode="tel"
+                autoComplete="tel"
                 placeholder="Your Phone (e.g. 555-123-4567)"
                 maxLength={20}
                 pattern="[0-9+\-\s\(\)]*"
@@ -106,7 +108,7 @@ const Contact = () => {
               <textarea
                 placeholder="Tell us about your project... *"
                 required
-                rows={5}
+                rows={4}
                 maxLength={2000}
                 value={form.message}
                 onChange={(e) => setForm({ ...form, message: e.target.value })}
@@ -116,7 +118,7 @@ const Contact = () => {
               <button
                 type="submit"
                 disabled={sending}
-                className="gold-gradient text-primary-foreground font-body text-sm tracking-widest uppercase px-8 py-4 rounded hover:opacity-90 transition-all disabled:opacity-60 disabled:cursor-not-allowed"
+                className="gold-gradient text-primary-foreground font-body text-sm tracking-widest uppercase px-5 py-3 sm:px-8 sm:py-4 rounded hover:opacity-90 transition-all disabled:opacity-60 disabled:cursor-not-allowed"
               >
                 {sending ? "Sending..." : "Send Message"}
               </button>

@@ -20,13 +20,13 @@ const NotFound = () => {
         <div className="flex flex-col sm:flex-row gap-3 justify-center mb-10">
           <Link
             to="/"
-            className="gold-gradient text-primary-foreground font-body text-sm tracking-widest uppercase px-8 py-4 rounded hover:opacity-90 transition-all inline-block"
+            className="gold-gradient text-primary-foreground font-body text-sm tracking-widest uppercase px-5 py-3 sm:px-8 sm:py-4 rounded hover:opacity-90 transition-all inline-block"
           >
             Back to Home
           </Link>
           <Link
             to="/contact"
-            className="border border-primary/30 text-primary font-body text-sm tracking-widest uppercase px-8 py-4 rounded hover:bg-primary/10 transition-all inline-block"
+            className="border border-primary/30 text-primary font-body text-sm tracking-widest uppercase px-5 py-3 sm:px-8 sm:py-4 rounded hover:bg-primary/10 transition-all inline-block"
           >
             Contact Us
           </Link>

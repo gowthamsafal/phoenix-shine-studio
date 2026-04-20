@@ -37,11 +37,11 @@ const Index = () => {
       <div className="absolute inset-0 bg-gradient-to-b from-background/40 via-background/55 to-background/75" />
 
       <div className="relative z-10 text-center">
-        <h1 className="font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-foreground leading-tight">
+        <h1 className="font-display text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-foreground leading-tight">
           Phoenix Glass <span className="gold-text">&</span> Mirror Inc
         </h1>
         <div className="mt-8">
-          <Link to="/contact" className="gold-gradient text-primary-foreground font-body text-sm tracking-widest uppercase px-8 py-4 rounded hover:opacity-90 transition-all inline-block">
+          <Link to="/contact" className="gold-gradient text-primary-foreground font-body text-sm tracking-widest uppercase px-5 py-3 sm:px-8 sm:py-4 rounded hover:opacity-90 transition-all inline-block">
             Get a Quote
           </Link>
         </div>
@@ -56,13 +56,13 @@ const Index = () => {
       <div className="absolute bottom-0 left-0 right-0 h-[1.5px] bg-gradient-to-r from-transparent via-primary to-transparent opacity-80" />
       {/* Subtle gold ambient glow */}
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_40%_at_50%_50%,hsl(43_50%_55%_/_0.07),transparent)] pointer-events-none" />
-      <div className="container mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 relative z-10">
+      <div className="container mx-auto px-6 grid grid-cols-3 gap-3 md:gap-8 relative z-10">
         {stats.map((s) => (
-          <div key={s.label} className="flex items-center gap-4 justify-center">
-            <s.icon className="text-primary" size={32} />
+          <div key={s.label} className="flex flex-col sm:flex-row items-center gap-2 sm:gap-4 justify-center text-center sm:text-left">
+            <s.icon className="text-primary shrink-0" size={24} />
             <div>
-              <p className="font-display text-2xl font-bold text-foreground">{s.value}</p>
-              <p className="text-muted-foreground text-sm">{s.label}</p>
+              <p className="font-display text-lg sm:text-2xl font-bold text-foreground">{s.value}</p>
+              <p className="text-muted-foreground text-xs sm:text-sm">{s.label}</p>
             </div>
           </div>
         ))}
@@ -100,7 +100,7 @@ const Index = () => {
       <div className="container mx-auto px-6 text-center">
         <h2 className="font-display text-2xl md:text-3xl lg:text-4xl font-bold text-primary-foreground mb-4">Ready to Transform Your Space?</h2>
         <p className="text-primary-foreground/80 mb-8 max-w-lg mx-auto text-sm md:text-base">Contact us today for a free consultation and quote on your glass or mirror project.</p>
-        <Link to="/contact" className="bg-background text-foreground font-body text-sm tracking-widest uppercase px-8 py-4 rounded hover:bg-background/90 transition-all">
+        <Link to="/contact" className="bg-background text-foreground font-body text-sm tracking-widest uppercase px-5 py-3 sm:px-8 sm:py-4 rounded hover:bg-background/90 transition-all inline-block">
           Contact Us Today
         </Link>
       </div>

@@ -88,8 +88,7 @@ const Services = () => (
         {services.map((s, i) => (
           <div
             key={s.title}
-            className="group bg-card border gold-border rounded p-5 md:p-8 hover:border-primary/50 transition-all duration-300 animate-fade-in"
-            style={{ animationDelay: `${i * 0.1}s`, opacity: 0 }}
+            className="group bg-card border gold-border rounded p-5 md:p-8 hover:border-primary/50 transition-all duration-300"
           >
             <div className="flex items-start gap-5">
               <div className="gold-gradient p-3 rounded shrink-0">
@@ -100,7 +99,7 @@ const Services = () => (
                 <p className="text-muted-foreground text-sm leading-relaxed mb-4">{s.desc}</p>
                 <ul className="grid grid-cols-2 gap-2">
                   {s.features.map((f) => (
-                    <li key={f} className="text-foreground text-xs flex items-center gap-1.5">
+                    <li key={f} className="text-foreground text-xs flex items-center gap-1.5 break-words min-w-0">
                       <span className="w-1 h-1 rounded-full bg-primary shrink-0" />
                       {f}
                     </li>
@@ -120,7 +119,7 @@ const Services = () => (
         <p className="text-primary-foreground/80 mb-8 max-w-lg mx-auto">
           Every project is unique. Contact us to discuss your specific requirements and get a free estimate.
         </p>
-        <Link to="/contact" className="inline-flex items-center gap-2 bg-background text-foreground font-body text-sm tracking-widest uppercase px-8 py-4 rounded hover:bg-background/90 transition-all">
+        <Link to="/contact" className="inline-flex items-center gap-2 bg-background text-foreground font-body text-sm tracking-widest uppercase px-5 py-3 sm:px-8 sm:py-4 rounded hover:bg-background/90 transition-all">
           Request a Quote <ArrowRight size={16} />
         </Link>
       </div>

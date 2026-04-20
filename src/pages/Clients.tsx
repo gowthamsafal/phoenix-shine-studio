@@ -66,7 +66,7 @@ const Clients = () => (
       <div className="container mx-auto px-6 text-center">
         <p className="text-primary font-body text-sm tracking-[0.3em] uppercase mb-2">Our Network</p>
         <h2 className="font-display text-2xl font-bold text-foreground mb-10">Trusted Partners</h2>
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 md:gap-6">
           {clients.map((c) => (
             <div
               key={c}
