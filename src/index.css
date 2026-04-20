@@ -233,10 +233,6 @@
     animation: logo-shine 1.8s ease-in-out infinite;
   }
 
-  .brand-logo {
-    filter: saturate(0.85) brightness(1.03) contrast(1.05);
-  }
-
   /* ── Hero luxury overlay system ─────────────────────────── */
 
   /* Radial vignette: bright centre, dark dramatic edges */

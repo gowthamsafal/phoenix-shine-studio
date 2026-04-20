@@ -7,8 +7,8 @@ const Footer = () => (
     <div className="container mx-auto px-6 py-8 md:py-12">
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-10">
         <div>
-          <div className="flex items-center gap-3.5 mb-4">
-            <img src={phoenixLogo} alt="Phoenix Glass Logo" className="h-12 md:h-14 w-auto mix-blend-screen brand-logo" />
+          <div className="flex items-center gap-2 mb-4">
+            <img src={phoenixLogo} alt="Phoenix Glass Logo" className="h-12 w-12 md:h-14 md:w-14 object-contain mix-blend-screen shrink-0" />
             <h3 className="font-display text-lg font-bold gold-text">
               Phoenix Glass & Mirror Inc
             </h3>
