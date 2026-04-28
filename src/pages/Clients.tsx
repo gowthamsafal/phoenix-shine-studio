@@ -27,7 +27,7 @@ const Clients = () => (
         <p className="text-primary font-body text-sm tracking-[0.3em] uppercase mb-2">Testimonials</p>
         <h1 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4">Our Clients</h1>
         <p className="text-foreground/80 max-w-2xl mx-auto">
-          Trusted by homeowners, designers, and businesses across Florida.
+          Trusted by homeowners, designers, and businesses across the region.
         </p>
       </div>
     </section>
