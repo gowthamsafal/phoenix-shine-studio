@@ -11,7 +11,7 @@ const EMAILJS_PUBLIC_KEY = "8K7EycbaXAPwlib5F";
 const contactInfo = [
   { icon: Phone, label: "Phone", value: "+1 7059776670", href: "tel:+17059776670" },
   { icon: Mail, label: "Email", value: "phoenixglassandmirror@gmail.com", href: "mailto:phoenixglassandmirror@gmail.com" },
-  { icon: MapPin, label: "Address", value: "58 Elmer Moss Avenue, Caledon", href: "https://maps.google.com/maps?q=58+Elmer+Moss+Avenue,+Caledon" },
+  { icon: MapPin, label: "Address", value: "58 Elmer Moss Avenue, Caledon, Ontario", href: "https://maps.google.com/maps?q=58+Elmer+Moss+Avenue,+Caledon,+Ontario" },
   { icon: Clock, label: "Hours", value: "Mon to Sat 9:00 AM to 7:00 PM", href: null },
 ];
 
@@ -168,7 +168,7 @@ const Contact = () => {
               <div className="absolute bottom-0 left-0 right-0 h-[1.5px] bg-gradient-to-r from-transparent via-primary to-transparent z-10 opacity-90" />
               <iframe
                 title="Phoenix Glass and Mirror Store Location"
-                src="https://maps.google.com/maps?q=58+Elmer+Moss+Avenue,+Caledon&output=embed"
+                src="https://maps.google.com/maps?q=58+Elmer+Moss+Avenue,+Caledon,+Ontario&output=embed"
                 width="100%"
                 height="300"
                 style={{ border: 0, display: "block" }}
