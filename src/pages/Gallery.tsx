@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 
 // Dynamically import all WhatsApp images in the assets folder
 const imageModules = import.meta.glob("../assets/WhatsApp*.jpeg", { eager: true });
-let images = Object.values(imageModules).map((mod: any) => mod.default || mod);
+let images = Object.values(imageModules).map((mod: { default?: string; [key: string]: unknown }) => mod.default || mod);
 
 // Sort images by filename for consistent order
 images = images.sort();

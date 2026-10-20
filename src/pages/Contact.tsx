@@ -4,9 +4,9 @@ import Layout from "@/components/Layout";
 import { Phone, Mail, MapPin, Clock, Instagram } from "lucide-react";
 import { toast } from "sonner";
 
-const EMAILJS_SERVICE_ID = "service_xr6wq9b";
-const EMAILJS_TEMPLATE_ID = "template_n48shdn";
-const EMAILJS_PUBLIC_KEY = "8K7EycbaXAPwlib5F";
+const EMAILJS_SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID || "service_xr6wq9b";
+const EMAILJS_TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID || "template_n48shdn";
+const EMAILJS_PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY || "8K7EycbaXAPwlib5F";
 
 const contactInfo = [
   { icon: Phone, label: "Phone", value: "+1 7059776670", href: "tel:+17059776670" },
